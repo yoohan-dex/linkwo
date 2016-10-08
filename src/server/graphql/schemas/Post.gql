@@ -1,0 +1,8 @@
+type Post {
+  _id: Int!
+  private: Boolean
+  title: String
+  text: String
+  views: Float
+  author: Author
+}

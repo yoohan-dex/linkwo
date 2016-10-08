@@ -1,0 +1,22 @@
+extends:
+  - 'xo-space'
+  - 'xo-space/esnext'
+  - 'xo-react/space'
+env:
+  browser: true
+  node: true
+globals:
+  __PRODUCTION__: true
+  __CLIENT__: true
+rules:
+  'react/no-children-prop': 0
+  'react/no-unescaped-entities': 0
+  'import/named': 0
+  'no-negated-condition': 0
+  comma-dangle:
+  - error
+  - 'always-multiline'
+settings:
+  import/ignore:
+    - \.gql$
+    - \.(scss|less|css)$

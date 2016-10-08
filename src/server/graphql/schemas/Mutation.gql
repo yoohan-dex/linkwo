@@ -1,0 +1,4 @@
+type Mutation {
+  postAuthor(name: String): String
+  registerUser(email: String, password: String): String
+}

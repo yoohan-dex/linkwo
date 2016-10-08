@@ -1,0 +1,7 @@
+type Query {
+  author(name: String!): String
+  getTest(testString: String): String
+  getAuthor(_id: Int!): Author
+  getPostsByAuthor(authorId: Int!): [Post]
+  getPostsByTitle(titleContains: String!): [Post]
+}
