@@ -1,0 +1,27 @@
+.test {
+  position: absolute;
+  color: yellow;
+  // left: 300px;
+  // transform: scale(5);
+  zoom: 500%;
+}
+.spinner {
+  height: 300px;
+  width: 300px;
+  background: yellow;
+  border-radius: 50%;
+  &:hover {
+    background: green;
+  }
+}
+.spinner1 {
+  color: green;
+  &:before, &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    background: red;
+  }
+}

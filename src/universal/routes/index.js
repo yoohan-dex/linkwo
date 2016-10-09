@@ -1,12 +1,14 @@
 import React from 'react';
 import {Route, IndexRoute} from 'react-router';
-import Home from '../containers/Home';
+import App from '../containers/AppContainer';
+import Hello from '../containers/Hello';
 import {NotFound} from '../common/NotFound';
 export default () => {
   return (
-    <Route path="/">
-      <IndexRoute component={Home}/>
-      <Route path="/hell" component={NotFound}/>
+    <Route path="/" component={App}>
+      <Route path="hello" component={Hello}/>
+      <Route path="*" component={NotFound}/>
     </Route>
   );
 };
+

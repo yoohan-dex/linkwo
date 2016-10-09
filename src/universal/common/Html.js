@@ -22,7 +22,7 @@ class Html extends React.Component {
           <div id="container">
             {children}
           </div>
-          <script async src={devServerURL + '/build/bundle.js'}/>
+          <script async src={'/build/bundle.js'}/>
         </body>
       </html>
     );

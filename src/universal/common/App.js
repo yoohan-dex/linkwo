@@ -7,7 +7,7 @@ class App extends React.Component {
     const {context, history} = this.props;
     return (
       <Provider {...context}>
-        <Router history={browserHistory}>
+        <Router key={Math.random()} history={browserHistory}>
           {routes()}
         </Router>
       </Provider>
