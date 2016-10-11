@@ -6,22 +6,59 @@
   zoom: 500%;
 }
 .spinner {
-  height: 300px;
-  width: 300px;
-  background: yellow;
+  left: 300px;
+  top: 200px;
+  width: 100px;
+  height: 100px;
+  background: none;
   border-radius: 50%;
-  &:hover {
-    background: green;
+  position: relative;
+  margin: 50px;
+  display: inline-block;
+  animation: spi 1s ease-in-out infinite;
+  &:after, &:before{
+    content: 'hello g?';
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+}
+@keyframes spi {
+  0% {
+    transform: rotate(0deg) 
+  }
+
+  25% {
+    transform: rotate(180deg) translate(100px)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+@keyframes hello {
+  0% {
+    transform: scale(1) 
+  }
+
+  100% {
+    transform: scale(1)
   }
 }
 .spinner1 {
   color: green;
   &:before, &:after {
+    background: black;
     position: absolute;
-    left: 0;
-    top: 0;
-    height: 50px;
-    width: 50px;
-    background: red;
+    width: 25%;
+    height: 25%;
+    animation: hello 2s ease-in-out infinite;
+  }
+  &:after {
+    background: yellow;
+    right: 0;
+    bottom: 0;
+    content: 'I am ';
   }
 }

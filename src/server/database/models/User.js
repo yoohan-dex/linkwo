@@ -1,6 +1,10 @@
 import mongoose from 'mongoose';
 
 export default new mongoose.Schema({
+  username: {
+    type: String,
+    default: 'NULL',
+  },
   email: {
     type: String,
     required: true,
@@ -16,6 +20,7 @@ export default new mongoose.Schema({
   scope: {
     type: String,
     enum: ['Customer', 'Admin'],
+    default: 'Customer',
   },
   token: {
     type: String,
@@ -28,5 +33,4 @@ export default new mongoose.Schema({
   createAt: {
     type: String,
   },
-  description: {type: String},
 });

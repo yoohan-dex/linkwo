@@ -26,7 +26,7 @@ export async function loginAccount(username, password) {
   return user.toJSON();
 }
 
-export async function registerAccount(email, password) {
+export async function registerAccount({email, password}) {
   const user = new db.User({
     email,
     password: sha512(password),

@@ -4,7 +4,7 @@
   "description": "a mobx develop framwork",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development nodemon ./index.js",
+    "start": "cross-env NODE_ENV=development node src/server/index.js",
     "prod": "cross-env NODE_ENV=production node ./index.js"
   },
   "keywords": [
@@ -38,6 +38,7 @@
     "node-sass": "^3.10.1",
     "nodemon": "^1.10.2",
     "path": "^0.12.7",
+    "piping": "^1.0.0-rc.4",
     "postcss-loader": "^0.13.0",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
@@ -52,6 +53,7 @@
     "xo": "^0.16.0"
   },
   "dependencies": {
+    "apollo-client": "^0.4.20",
     "apollo-server": "^0.3.2",
     "babel-plugin-transform-async-to-generator": "^6.16.0",
     "babel-plugin-transform-runtime": "^6.15.0",
@@ -60,18 +62,22 @@
     "classnames": "^2.2.5",
     "cross-env": "^3.1.1",
     "crypto": "0.0.3",
+    "dotenv": "^2.0.0",
+    "dotenv-expand": "^0.1.0",
     "express": "^4.14.0",
     "graphql": "^0.7.1",
     "graphql-tools": "^0.7.2",
+    "joi": "^9.1.0",
     "jwt-simple": "^0.5.0",
     "lodash": "^4.16.3",
     "mobx": "^2.6.0",
     "mobx-react": "^3.5.7",
     "mongoose": "^4.6.3",
     "react": "^15.3.2",
+    "react-apollo": "^0.5.8",
     "react-dom": "^15.3.2",
     "react-hot-loader": "^3.0.0-beta.5",
-    "react-router": "^2.8.1",
+    "react-router": "^4.0.0-alpha.4",
     "socketcluster": "^5.0.17"
   }
 }

@@ -44,7 +44,7 @@ export default {
       include: path.join(sources, 'assets'),
     }, {
       test: /\.(css|scss)$/,
-      loader: 'style!css?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]postcss',
+      loader: 'style!css?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]!sass',
       exclude: globalCSS,
       include: clientInclude,
     }, {
@@ -61,12 +61,6 @@ export default {
   resolve: {
     extensions: ['', '.js', '.gql', 'scss', 'css'],
     modules: [sources, 'node_modules'],
-  },
-  sassLoader: {
-    // data: '@import "client/globalStyles/libs/index.scss";',
-    includePaths: /src/,
-    // outputStyle: 'compressed',
-    sourceMap: true,
   },
   plugins: [
     new HappyPack({
