@@ -1,7 +1,7 @@
 import {observable, asFlat, toJS} from 'mobx';
 import mergeObservables from './helpers/mergeObservables';
 
-const defaultState = observable({
+export const defaultState = observable({
   app: {
     title: 'LinkWo->',
     statusCode: 200,

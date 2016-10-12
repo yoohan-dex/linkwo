@@ -8,6 +8,7 @@ export default class AppContainer extends React.Component {
     const {state, children} = this.props;
     return (
       <div>
+        <App/>
         {children}
       </div>
     );

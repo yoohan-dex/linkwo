@@ -2,3 +2,12 @@ body {
   background: indigo;
   color: white;
 }
+a::visited {
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+a:visited{
+  color: white;
+}
