@@ -1,6 +1,6 @@
 {
   "name": "linkwo",
-  "version": "0.0.1",
+  "version": "1.0.3",
   "description": "a mobx develop framwork",
   "main": "index.js",
   "scripts": {
