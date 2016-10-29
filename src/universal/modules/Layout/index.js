@@ -12,7 +12,7 @@ import Navigation from './Navigation';
 
 
 @CSSModules(s, {allowMultiple: true})
-class Sidebar extends Component {
+class Layout extends Component {
   constructor(props) {
     super();
     const {pathname} = props;
@@ -39,7 +39,7 @@ class Sidebar extends Component {
     ];
     return (
       <div>
-        <Navigation/>
+        <Navigation pathname={`${pathname}/options`}/>
         <main styleName={mainStyle}>
           <div>
 
@@ -47,7 +47,7 @@ class Sidebar extends Component {
             <article>
               <section>
                 <div styleName="resume-page">
-                  {isExact ? <Link to={`${pathname}/open`}>OPEN!</Link> : null}
+                  {isExact ? <Link to={`${pathname}/options`}>OPEN!</Link> : null}
                   <p>this is the resume page!!</p>
                 </div>
               </section>
@@ -59,7 +59,7 @@ class Sidebar extends Component {
   }
 }
 
-Sidebar.propTypes = {
+Layout.propTypes = {
 
 };
 
@@ -102,7 +102,7 @@ const MatchWithFade = ({component: Component, ...rest}) => {
   );
 };
 
-export default Sidebar;
+export default Layout;
 
 // <MatchWithFade
 //           pattern={`${pathname}/open`}

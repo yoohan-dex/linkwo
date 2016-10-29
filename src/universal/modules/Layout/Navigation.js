@@ -2,33 +2,41 @@ import React, {Component, PropTypes} from 'react';
 import autobind from 'autobind-decorator';
 import {Match, Link} from 'react-router';
 import s from './navigation.styl';
-
+import LoginForm from '../../components/LoginForm';
 const Test = text => <h2>{text}</h2>;
-const activities = [
+const activities = pathname => [
   {
     title: 'first',
     routes: [
       {
-        to: '/hello/open/abc',
-        text: 'ABC',
-        component: Test.bind(null, 'abc'),
+        to: `${pathname}/template`,
+        text: '简历模板',
       }, {
-        to: '/hello/open/cad',
-        text: 'CAD',
-        component: Test.bind(null, 'cad'),
+        to: `${pathname}/component`,
+        text: '自定义组件',
+      }, {
+        to: `${pathname}/login`,
+        text: '登陆',
+      }, {
+        to: `${pathname}/profile`,
+        text: '关于我',
+      }, {
+        to: `${pathname}/setting`,
+        text: '设置',
       },
     ],
   }, {
     title: 'second',
     routes: [
       {
-        pattern: '/hello/open/abc',
-        text: 'string',
-        component: Test.bind(null, 'abc'),
+        pattern: `${pathname}/template`,
+        component: Test.bind(null, 'template'),
       }, {
-        pattern: '/hello/open/cad',
-        text: 'string',
+        pattern: `${pathname}/component`,
         component: Test.bind(null, 'cad'),
+      }, {
+        pattern: `${pathname}/login`,
+        component: LoginForm,
       },
     ],
   },
@@ -72,10 +80,11 @@ class Navigation extends Component {
   }
 
   render() {
+    const {pathname} = this.props;
     return (
       <nav className={s.nav}>
         <Stage stageState={this.state.stageState}>
-          {activities.map(this.renderActivity)}
+          {activities(pathname).map(this.renderActivity)}
         </Stage>
       </nav>
     );
@@ -95,6 +104,7 @@ const Activity = ({children, position, fore, back, title, routes}) => {
     pattern ? <Match pattern={pattern} key={`match-${i}`} component={component}/> : null;
   const handleClick = () => {
     back();
+
     setTimeout(() => {
       history.back();
     }, 500);

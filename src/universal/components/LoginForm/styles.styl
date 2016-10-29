@@ -1,0 +1,59 @@
+.container
+  margin 0 
+  fieldset
+    border 0
+    margin 0
+    padding 0
+
+  legend
+    font-size 30px
+    margin-bottom 10px
+  ::-webkit-input-placeholder {
+   color: white;
+   opacity: 0.8;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    color: white;
+    opacity: 0.8;  
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: white;
+    opacity: 0.8;  
+  }
+
+  :-ms-input-placeholder {  
+    color: white;
+    opacity: 0.8;  
+  }
+  input
+    color black
+    border 0
+    padding 10px
+    margin 10px 0
+    width 100%
+    font-size 20px
+    background lighten(#CE5C60, 5)
+    appearance none 
+    transition outline 0.5s, background 0.5s
+    outline-color transparent
+    cursor pointer
+    &:focus
+      outline-color white
+    &:hover
+      background lighten(#CE5C60, 10)
+      
+  button
+    width 100%
+    border 0
+    background darken(#CE5C60, 5)
+    padding 10px
+    font-size 20px
+    margin 10px 0
+    transition box-shadow 0.5s
+    box-shadow 0 0 0 0 transparent
+    &:hover
+      box-shadow 0 0 0 2px white
+    &:focus
+      outline none

@@ -9,7 +9,7 @@ import {Link, Match} from 'react-router';
 import {Button, Header} from 'semantic-ui-react';
 import s from './style.styl';
 import Hey from '../Hey';
-import Sidebar from '../../modules/Sidebar';
+import Layout from '../../modules/Layout';
 
 const query = gql`
   mutation Mutation($name: String!) {
@@ -19,25 +19,12 @@ const query = gql`
 @observer(['form'])
 @CSSModules(s)
 export default class Hello extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      sideBarState: false,
-    };
-    this.handleSidebar = this.handleSidebar.bind(this);
-  }
-  handleSidebar() {
-    console.log('have change!');
-    this.setState({
-      sideBarState: !this.state.sideBarState,
-    }, console.log('have change!'));
-  }
   render() {
     const {pathname, isExact} = this.props;
 
     return (
       <div styleName="container">
-        <Sidebar pathname={pathname} isExact={isExact}/>
+        <Layout pathname={pathname} isExact={isExact}/>
       </div>
     );
   }

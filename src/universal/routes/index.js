@@ -7,7 +7,7 @@ export default () => {
   return (
     <main>
       <Match exactly pattern="/" component={App}/>
-      <Match pattern="/hello" component={Hello}/>
+      <Match pattern="/edit" component={Hello}/>
       <Miss component={NotFound}/>
     </main>
   );
