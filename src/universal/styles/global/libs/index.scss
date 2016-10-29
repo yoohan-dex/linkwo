@@ -1,0 +1,30 @@
+@import "./theme.scss";
+@import "./_vars.scss";
+@import "./_functions.scss";
+@import "./_mixins.scss";
+@import "./_skel.scss";
+@include skel-breakpoints((
+		xlarge: '(max-width: 1680px)',
+		large: '(max-width: 1368px)',
+		medium: '(max-width: 1024px)',
+		small: '(max-width: 736px)',
+		xsmall: '(max-width: 480px)',
+		xxsmall: '(max-width: 360px)'
+	));
+
+	@mixin color($p) {
+		@include color-typography($p);
+	}
+
+$animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1) !default;
+$animation-curve-default: $animation-curve-fast-out-slow-in !default;
+$animation-duration: .35s;
+$nav-padding-right: 40px;
+$tab-label-v-padding: 5px;
+$tab-label-h-padding: 20px;
+$tab-text-height: 20px;
+$tab-text-height-small: 20px; 
+$font-weight-semi-bold: 400;
+$tab-text-inactive-color: $button;
+
+

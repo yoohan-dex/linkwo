@@ -11,7 +11,7 @@ import apollo from './middlewares/apollo';
 import devConfig from '../../config/webpack.dev';
 const PROD = process.env.NODE_ENV === 'production';
 export function run(worker) {
-  logger('   >> Worker PID:')(process.pid);
+  logger('   >> Worker PID:', process.pid);
   const app = express();
   // const scServer = worker.scServer;
   const httpServer = worker.httpServer;

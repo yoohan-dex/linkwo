@@ -20,4 +20,4 @@ export const options = {
   socketChannelLimit: 1000,
   rebootWorkerOnCrash: true,
 };
-new SocketCluster(options);
+new SocketCluster(options); // eslint-disable-line

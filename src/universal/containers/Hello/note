@@ -1,0 +1,39 @@
+const {form, pathname} = this.props;
+    // console.log('getform', form.validate);
+    // this.props.mutate({variables: {name: 'yello?'}})
+    // .then(({data}) => console.log('got data', data))
+    // .catch(err => {console.log('got err', err);});
+    return (
+      <div styleName="testbb">
+        
+        <form>
+          <input
+            type="text"
+            name={form.$('email').name}
+            value={form.$('email').value}
+            placeholder={form.$('email').label}
+            onChange={form.$('email').sync}
+            />
+          <p styleName="test">{form.$('email').error}</p>
+          <a>yes?</a>
+          <input
+            type="text"
+            name={form.$('password').name}
+            value={form.$('password').value}
+            placeholder={form.$('password').label}
+            onChange={form.$('password').sync}
+            />
+          <p>{form.$('password').error}</p>
+
+          <Button type="submit" onClick={form.handleOnSubmit}>Submit</Button>
+          <button type="button" onClick={form.handleOnReset}>Reset</button>
+          <button type="button" onClick={form.handleOnClear}>Clear</button>
+
+          <p>{form.error}</p>
+          <Link to="/hello/hey">Hey</Link>
+          
+        </form>
+        <Match pattern={pathname} exactly render={() => null}/>
+        <Match pattern={`${pathname}/hey`} component={Hey}/>
+      </div>
+    );

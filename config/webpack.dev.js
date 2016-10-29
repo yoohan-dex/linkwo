@@ -22,7 +22,7 @@ merge(config, {
     pathinfo: true,
   },
 });
-
+console.log(path.join(__dirname, '../src/universal/global/libs/index.scss'));
 config.module.loaders.forEach(loader => {
   if (loader.loader === 'babel') {
     loader.query.plugins.unshift('react-hot-loader/babel');

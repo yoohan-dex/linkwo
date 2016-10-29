@@ -1,0 +1,65 @@
+.nav 
+  position fixed
+  top 0
+  left 0
+  bottom 0
+  width 100%
+  perspective 300
+  perspective-origin: left center
+  background #CE5C60
+  // animation nav-rotate 3s 
+.nav ul li
+  list-style none
+@keyframes nav-rotate
+  0%
+    opacity 0
+    transform rotateY(-50deg) translateX(-100px)
+  90%
+    opacity 1
+    transform rotateY(5deg) translateX(5px)
+  100%
+    opacity 1
+    transform rotateY(0deg) tannslateX(0px)
+
+.stage
+  position relative
+  width 100%
+  display flex
+  transition left 0.5s cubic-bezier(0.15, 1.17, 1, 1)
+  color white
+.activity
+  width 20%
+  padding 2%
+  user-select none 
+  hr
+    font-size 5px
+
+  & navigation
+    display flex
+    flex-direction column
+    & ul
+      padding 20px 0
+      & li a
+        padding 15px 0
+        color white
+        display inline-block
+        width 100%
+        font-size 25px
+        text-align center
+        transition color 0.2s cubic-bezier(1, 0.31, 1, 1), background 0.1s cubic-bezier(1, 0.31, 1, 1)
+        &:hover
+          color #525A6F
+          background darken(#CE5C60, 3)
+
+        
+.indication
+  margin 0
+  cursor pointer
+  transition color 0.2s cubic-bezier(0.07, 1.1, 1, 1)
+  &:hover
+    color #525A6F
+
+.indicationFirst
+ 
+.title
+  margin 0

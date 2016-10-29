@@ -1,13 +1,34 @@
-body {
-  background: indigo;
-  color: white;
-}
-a::visited {
-  color: white;
-}
-a {
-  text-decoration: none;
-}
-a:visited{
-  color: white;
-}
+
+@import "./libs/_vars.scss";
+@import "./libs/_functions.scss";
+@import "./libs/_mixins.scss";
+@import "./libs/_skel.scss";
+@include skel-breakpoints((
+		xlarge: '(max-width: 1680px)',
+		large: '(max-width: 1280px)',
+		medium: '(max-width: 980px)',
+		small: '(max-width: 736px)',
+		xsmall: '(max-width: 480px)',
+		xxsmall: '(max-width: 360px)'
+	));
+
+	@include skel-layout((
+		reset: 'full',
+		boxModel: 'border',
+		grid: ( gutters: 1.5em ),
+		breakpoints: (
+			small: (
+				grid: ( gutters: 1em ),
+			)
+		)
+	));
+
+	@mixin color($p) {
+		@include color-typography($p);
+	}
+
+
+
+// Base.
+@import "./base/page.scss";
+@import "./base/typography.scss";

@@ -1,14 +1,14 @@
 import React from 'react';
 import {observable, computed} from 'mobx';
 import {observer} from 'mobx-react';
-import App from '../components/App';
+import Nav from '../components/Nav';
 @observer(['state'])
 export default class AppContainer extends React.Component {
   render() {
     const {state, children} = this.props;
     return (
       <div>
-        <App/>
+        <Nav/>
         {children}
       </div>
     );

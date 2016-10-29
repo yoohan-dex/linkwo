@@ -3,11 +3,12 @@ import {render} from 'react-dom';
 import {AppContainer} from 'react-hot-loader';
 import App from './App';
 import {defaultState} from './state';
-import '../universal/styles/global/index.scss';
+import '../universal/assets/css/style.styl';
 import ApolloClient, {createNetworkInterface, addTypename} from 'apollo-client';
 import {ApolloProvider} from 'react-apollo';
 import form from './state/form';
 import context from './context';
+import '../universal/assets/Semantic-UI-CSS/semantic.css';
 // import form from '../universal/containers/hello/form';
 const apolloClient = new ApolloClient({
   networkInterface: createNetworkInterface({

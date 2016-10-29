@@ -4,7 +4,7 @@ const plugins = {dvr: validatorjs};
 
 const fields = {
   email: {
-    labal: 'Email',
+    label: 'Email',
     rules: 'required|email|string|between:5,25',
   },
   password: {
